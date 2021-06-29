@@ -1,0 +1,315 @@
+/* #region ---------- Setup section ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: white;
+}
+
+h1, h2 {
+    color: rgb(242, 106, 159);
+}
+
+h3, h4, h5, h6 {
+    color:rgb(16, 156, 138);
+}
+
+/* Stop links going blue/purple */
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* #endregion */
+
+/* #region ---------- Header section ---------- */
+
+header {
+    height: 80px;
+    width: 100%;
+    z-index: 9999;
+    /*Change to white*/
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+}
+
+.logo {
+    margin-left: 2rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo img {
+    padding-right: 20px;
+}
+
+/* un-hide element when screen size small */
+
+.menu {
+    visibility: hidden;
+    margin-right: 2rem;
+}
+
+nav {
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    white-space: nowrap;
+    font-size: 1.125rem;
+    color:rgb(16, 156, 138);
+    margin: 0 40px;
+}
+
+#join {
+    background-color: rgb(16, 156, 138);
+    color: white;
+    padding: 8px 35px;
+    border-radius: 980px;
+}
+/* #endregion */
+
+/* ---------- Main section ---------- */
+
+.grid {
+    /*margin: 10px 10px;*/
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+    justify-content: center;
+    align-content: start;
+    gap: 100px 40px;
+}
+
+.intro, .nursery, .reviews, .join {
+    grid-column: 1 / -1;
+    gap: 40px;
+}
+
+h2 {
+    justify-self: center;
+    align-self: center;
+    font-size: 4.25rem;
+    grid-area: 1 / 1 / span 1 / -1;
+}
+
+/* #region ---------- Intro section ---------- */
+
+.intro {
+    height: 100vh;
+    background-image: url("./img/header_image3.jpg");
+    background-size: cover;
+    background-position: 50% 40%;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(12, 1fr);
+    align-items: center;
+}
+
+.intro h1 {
+    font-size: 6rem;
+    grid-area: 2 / 2 / span 1 / span 5;
+    text-shadow: 1px 1px white;
+}
+
+.intro h3 {
+    display: block;
+    font-size: 2.5rem;
+    grid-area: 3 / 2 / span 1 / span 3;
+    text-shadow: 1px 1px white;
+}
+
+.intro img {
+    grid-area: 1 / 7 / span 4 / -1;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* #endregion */
+
+/* #region ---------- Nursery section ---------- */
+
+.nursery {
+    background-color: white;
+    display: grid;
+    grid-template: repeat(4, minmax(50px, max-content)) / repeat(12, 1fr);
+    align-items: stretch;
+}
+
+.nursery img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.nursery .a {
+    grid-area: 2 / 2 / span 1 / span 6;
+}
+
+.nursery .b {
+    grid-area: 3 / 2 / span 1 / span 6;
+}
+
+.nursery .c {
+    grid-area: 4 / 2 / span 1 / span 6;
+}
+
+.nursery .d {
+    object-fit: stretch;
+    grid-area: 2 / 8 / span 3 / span 4;
+}
+
+.rooms {
+    display: grid;
+    grid-template: repeat(4, minmax(50px, max-content)) / repeat(12, 1fr);
+    align-items: stretch;
+    justify-items: stretch;
+    gap: 40px;
+    color:rgb(16, 156, 138);
+    /* hide hide hide */
+    display: none
+}
+
+/*
+.room h3 {
+    font-size: 2.5rem;
+}
+
+.room img {
+    object-fit: cover;
+    box-shadow: 0px 0px 10px black;
+}
+
+.explorers img {
+    grid-area: 2 / 2 / span 1 / span 6;
+}
+
+.explorers h3 {
+    grid-area: 2 / 2 / span 1 / span 6;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+.room h3 {
+    display: none;
+}
+
+.explorers 
+
+.adventurers img {
+    grid-area: 3 / 2 / span 1 / span 6;
+}
+
+.discoverers img {
+    grid-area: 4 / 2 / span 1 / span 6;
+}
+
+*/
+
+/* #endregion */
+
+/* #region ---------- Our Nursery section ---------- */
+
+/* add shadow to each box initially */
+
+/* add white gradient top to transparent when highlight box */
+
+/* #endregion */
+
+/* #region ---------- Reviews section ---------- */
+
+.reviews {
+    background-color: rgb(92, 143, 142);
+    display: grid;
+    grid-template: repeat(4, minmax(50px, max-content)) / repeat(12, 1fr);
+    align-items: stretch;
+}
+
+.reviews h2 {
+    margin-top: 100px;
+}
+
+/* #endregion */
+
+/* #region ---------- Joim section ---------- */
+
+.join {
+    background-color: white;
+    display: grid;
+    grid-template: repeat(4, minmax(50px, max-content)) / repeat(12, 1fr);
+    align-items: stretch;
+}
+
+/* #endregion */
+
+/* #region ---------- Footer section ---------- */
+
+footer {
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    grid-template: 100px 1fr 1fr 1fr 100px / repeat(12, 1fr);
+    justify-content: center;
+    align-content: start;
+    background-color: rgb(92, 143, 142);
+}
+
+footer h4 {
+    /* Change font size */
+    font-size: 1.25rem;
+    color: white;
+    grid-area: 2 / 2 / span 1 / span 1;
+    align-self: flex-end;
+}
+
+.sitemap, address, .socials {
+    color: white;
+    list-style: none;
+}
+
+.sitemap {
+    grid-area: 3 / 2 / span 2 / span 2;
+}
+
+address {
+    grid-area: 3 / 4 / span 2 / span 3;
+}
+
+.socials {
+    grid-area: 3 / 7 / span 2 / span 2;
+}
+
+/* #endregion */
+
+/* #region ---------- Media queries ---------- */
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+
+    .intro h1 {
+        font-size: 3rem;
+        grid-area: 2 / 2 / span 1 / span 5;
+    }
+    
+    .intro h3 {
+        display: block;
+        font-size: 1.25rem;
+        grid-area: 3 / 2 / span 1 / span 4;
+    }
+}
+
+/* #endregion */
