@@ -18,54 +18,53 @@
     </head>
     <body>
         <header>
-            <div class="logo">
-                <a href="file:///Users/bud/Desktop/projects/html/Liberty%20Kids/index.html"><img src="./img/logo w name.svg" alt="Liberty Kid's logo" height="160px" width="auto"></a>
+            <div class="container flex">
+                <a class="logo" href="file:///Users/bud/Desktop/projects/html/Liberty_kids/index.html"><img src="./img/logo_inline.svg" alt="Liberty Kid's logo" height="60px" width="auto"></a>
+                <nav>
+                    <a href="#about">About Us</a>
+                    <a href="#our_nursery">Our Nursery</a>
+                    <a id="join" href="#join">Join</a>
+                </nav>
             </div>
-            <nav>
-                <a href="#about">About Us</a>
-                <a href="#our_nursery">Our Nursery</a>
-                <a id="join" href="#join">Join</a>
-            </nav>
-            <!--temp adjustment to width to center the nav bar-->
-            <img class="menu" src="./img/menu_icon.svg" alt="menu icon" height="auto" width="303.5">
         </header>
         <main>
-            <div class="grid">
-                <section class="intro">
+            <section class="intro">
+                <div class="container grid">
                     <h1>Home from home.</h1>
                     <h3>Nurturing your child to reach their potential.</h3>
-                </section>
-                <section class="nursery">
+                </div>
+            </section>
+            <section class="nursery">
+                <div class="container grid-3">
                     <h2>Our Nursery</h2>
-                    <img class="a" src="./img/explorers.jpeg" alt="crawling baby">
-                    <img class="b" src="./img/adventurers.png" alt="child playing">
-                    <img class="c" src="./img/discoverers.jpeg" alt="child pushing rolling pin">
-                    <img class="d" src="./img/forrest_school.jpeg" alt="child reaching flower">
-                    <div class="rooms">
-                        <div class="room explorers">
-                            <h3>Explorers</h3>
-                            <img src="./img/explorers.jpeg" alt="crawling baby">
-                            <h3>0 - 2 years</h3>
-                        </div>
-                        <div class="room adventurers">
-                            <h3>Adventurers</h3>
-                            <img src="./img/adventurers.png" alt="child playing">
-                            <h3>2 - 3 years</h3>
-                        </div>
-                        <div class="room discoverers">
-                            <h3>Discoverers</h3>
-                            <img src="./img/discoverers.jpeg" alt="child pushing rolling pin">
-                            <h3>3 - 5 years</h3>
-                        </div>
+                    <div class="card explorers">
+                        <img src="./img/explorers.jpeg" alt="crawling baby">
+                        <h3 class="name">Explorers</h3>
+                        <h3 class="years">0 - 2 years</h3>
                     </div>
-                </section>
-                <section class="reviews">
-                    <h2>Reviews</h2>
-                </section>
-                <section class="join">
-                    <h2>Come and Book a Visit</h2>
-                </section>
-            </div>
+                    <div class="card adventurers">
+                        <img src="./img/adventurers.png" alt="child playing">
+                        <h3 class="name">Adventurers</h3>
+                        <h3 class="years">2 - 3 years</h3>
+                    </div>
+                    <div class="card discoverers">
+                        <img src="./img/discoverers.jpeg" alt="child pushing rolling pin">
+                        <h3 class="name">Discoverers</h3>
+                        <h3 class="years">3 - 5 years</h3>
+                    </div>
+                    <div class="forrest">
+                        <img src="./img/forrest_school.jpeg" alt="child reaching flower">
+                        <h3 class="name">Forrest School</h3>
+                        <h3 class="years">3 - 5 years</h3>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews">
+                <h2>Reviews</h2>
+            </section>
+            <section class="join">
+                <h2>Come and Book a Visit</h2>
+            </section>
         </main>
         <footer>
             <h4>Sitemap</h4>
