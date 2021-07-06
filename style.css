@@ -1,5 +1,12 @@
 /* #region ---------- Setup section ---------- */
 
+:root {
+    --color-main: rgb(16, 156, 138);
+    --color-pink: rgb(242, 106, 159);
+    --color-bg: rgb(92, 143, 142);
+    --color-bg2: #fafafa;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +20,11 @@ html {
 }
 
 h1, h2 {
-    color: rgb(242, 106, 159);
+    color: var(--color-pink);
 }
 
 h3, h4, h5, h6 {
-    color:rgb(16, 156, 138);
+    color: var(--color-main);
 }
 
 h1 {
@@ -43,7 +50,7 @@ a, a:hover, a:focus, a:active {
 /* #region ---------- Utilities section ---------- */
 
 .container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 1vw;
 }
@@ -58,7 +65,7 @@ a, a:hover, a:focus, a:active {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
-    --gap: 1rem;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -80,6 +87,37 @@ a, a:hover, a:focus, a:active {
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.button-full {
+    white-space: nowrap;
+    border: 2px transparent solid;
+    background-color: var(--color-main);
+    color: white;
+    border-radius: 980px;
+    padding: 10px 35px;
+}
+
+.button-full:hover {
+    border: 2px var(--color-main) solid;
+    background-color: white;
+    color: var(--color-main);
+    transform: scale(1);
+}
+
+.button-empty {
+    white-space: nowrap;
+    border: 2px var(--color-main) solid;
+    background-color: white;
+    color: var(--color-main);
+    border-radius: 980px;
+    padding: 10px 35px;
+}
+
+.button-empty:hover {
+    border: 2px transparent solid;
+    background-color: var(--color-main);
+    color: white;
 }
 
 /* #endregion */
@@ -105,39 +143,26 @@ nav {
     align-items: center;
 }
 
-nav a {
+header nav a {
     white-space: nowrap;
     font-size: 1.125rem;
-    color:rgb(16, 156, 138);
+    color: var(--color-main);
     margin: 0 2rem;
 }
 
-nav a:hover {
-    border-bottom: 2px rgb(16, 156, 138) solid;
-    color:rgb(16, 156, 138);
+header nav a:hover {
+    border-bottom: 2px var(--color-main) solid;
+    color: var(--color-main);
     transform: scale(0.96);
 }
 
 #join {
-    border: 2px transparent solid;
-    background-color: rgb(16, 156, 138);
-    color: white;
-    border-radius: 980px;
-    padding: 10px 35px;
     margin-right: 0;
-    border-bottom: none;
-}
-
-#join:hover {
-    border: 2px rgb(16, 156, 138) solid;
-    background-color: white;
-    color:rgb(16, 156, 138);
-    transform: scale(1);
 }
 
 /* #endregion */
 
-/* ---------- Main section ---------- */
+/* #region ---------- Main section ---------- */
 
 main {
     width: 100vw;
@@ -148,14 +173,16 @@ h2 {
     align-self: center;
     text-align: center;
     grid-column: 1 / -1;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    grid-row: 1 / span 1;
 }
 
 /* Creates even margin between sections */
-section:nth-child(even) {
-    margin-bottom: 2rem;
+
+section, footer {
+    padding: 4rem 0;
 }
+
+/* #endregion */
 
 /* #region ---------- Intro section ---------- */
 
@@ -253,7 +280,7 @@ section:nth-child(even) {
 }
 
 .nursery .card:hover, .nursery .forrest:hover {
-    transition: 0.2s ease-in-out;
+    transition: 0.15s ease-in-out;
     box-shadow: 0 0 25px rgb(0 0 0 / 20%);
 }
 
@@ -294,21 +321,73 @@ section:nth-child(even) {
 
 /* #endregion */
 
-/* #region ---------- Our Nursery section ---------- */
-
-/* add shadow to each box initially */
-
-/* add white gradient top to transparent when highlight box */
-
-/* #endregion */
-
 /* #region ---------- Reviews section ---------- */
 
 .reviews {
-    background-color: rgb(92, 143, 142);
+    background-color: var(--color-bg2);
+}
+
+.statement {
+    max-width: 100%;
     display: grid;
-    grid-template: repeat(4, minmax(50px, max-content)) / repeat(12, 1fr);
-    align-items: stretch;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    gap: 1rem;
+    align-items: center;
+    justify-content: start;
+}
+
+.a {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.b {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    justify-content: start;
+}
+
+.statement img {
+    /*display: inline-block;*/
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    max-width: 100%;
+    height: auto; 
+}
+
+.statement h4 {
+    align-self: flex-start;
+    font-size: 1.75rem;
+}
+
+blockquote {
+    font-size: 2rem;
+    justify-self: center;
+}
+
+/* #endregion */
+
+/* #region ---------- Banner section ---------- */
+
+.banner {
+    background-color: var(--color-bg);
+}
+
+.banner .flex {
+    justify-content: space-around;
+}
+
+.banner img {
+    max-height: 125px;
+}
+
+/* Need better solution */
+.banner .b {
+    padding: 0 31.5px;
+}
+
+.banner .c {
+    padding: 0 91.5px;
 }
 
 /* #endregion */
@@ -317,9 +396,16 @@ section:nth-child(even) {
 
 .join {
     background-color: white;
-    display: grid;
-    grid-template: repeat(4, minmax(50px, max-content)) / repeat(12, 1fr);
-    align-items: stretch;
+}
+
+.join p {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 10px 0;
+}
+
+.join a {
+    margin: 0 20px;
 }
 
 /* #endregion */
@@ -329,36 +415,60 @@ section:nth-child(even) {
 footer {
     width: 100vw;
     height: 50vh;
-    display: grid;
-    grid-template: 100px 1fr 1fr 1fr 100px / repeat(12, 1fr);
-    justify-content: center;
-    align-content: start;
-    background-color: rgb(92, 143, 142);
-}
-
-footer h4 {
-    /* Change font size */
-    font-size: 1.25rem;
+    background-color: var(--color-bg);
     color: white;
-    grid-area: 2 / 2 / span 1 / span 1;
-    align-self: flex-end;
 }
 
-.sitemap, address, .socials {
+footer .grid {
+    gap: 1rem;
+}
+
+footer nav {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+footer nav a {
     color: white;
-    list-style: none;
+    padding: 0 20px;
+    border-right: 2px white solid;
+    border-bottom: 2px transparent solid;
 }
 
-.sitemap {
-    grid-area: 3 / 2 / span 2 / span 2;
+footer a:hover {
+    border-bottom: 2px white solid;
 }
 
-address {
-    grid-area: 3 / 4 / span 2 / span 3;
+footer nav a:last-child {
+    border-right: none;
 }
 
-.socials {
-    grid-area: 3 / 7 / span 2 / span 2;
+footer address {
+    grid-column: 1 / -1;
+    justify-self: center;
+    grid-row: 2 / span 1;
+}
+
+address a {
+    padding: 0;
+    border: none;
+}
+
+footer .flex {
+    grid-column: 1 / -1;
+    grid-row: 3 / span 1;
+    justify-content: space-evenly;
+}
+
+footer img {
+    height: 50px;
+}
+
+.ignore {
+    font-size: 10px;
+    border: none;
+    grid-column: 1 / -1;
+    justify-self: center;
 }
 
 /* #endregion */
