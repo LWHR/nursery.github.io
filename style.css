@@ -279,7 +279,7 @@ section, footer {
     font-size: 1.5rem;
 }
 
-.nursery .card:hover, .nursery .forrest:hover {
+.nursery .card img:hover, .nursery .forrest img:hover {
     transition: 0.15s ease-in-out;
     box-shadow: 0 0 25px rgb(0 0 0 / 20%);
 }
@@ -392,13 +392,14 @@ blockquote {
 
 /* #endregion */
 
-/* #region ---------- Joim section ---------- */
+/* #region ---------- Join section ---------- */
 
 .join {
     background-color: white;
 }
 
 .join p {
+    font-size: 1.25rem;
     grid-column: 1 / -1;
     justify-self: center;
     padding: 10px 0;
@@ -462,6 +463,7 @@ footer .flex {
 
 footer img {
     height: 50px;
+    filter: invert(1);
 }
 
 .ignore {

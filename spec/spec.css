@@ -1,0 +1,70 @@
+html {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+    margin: 50px;
+}
+
+.container {
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.a, .b, .c, .d, .e {
+    padding: 50px;
+    margin-right: 20px;
+}
+
+.f {
+    padding: 50px;
+}
+
+.a {
+    /*Font teal*/
+    background-color: rgb(16, 156, 138);
+}
+
+.b {
+    /*Mono teal*/
+    background-color: rgb(21, 202, 179);
+}
+
+.c {
+    /* Background pink */
+    background-color: rgb(242, 106, 159);
+}
+
+.d {
+    /* Text pink */
+    background-color: rgb(196, 43, 91);
+}
+
+.e {
+    /*background teal*/
+    background-color: rgb(92, 143, 142);
+}
+
+.f {
+    /*Monochromatic pink*/
+    background-color: rgb(215, 75, 119);
+}
+/*
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.5rem;
+}
+
+h3 {
+    font-size: 3.375rem;
+}
+
+h4 {
+    font-size: 
+}*/
